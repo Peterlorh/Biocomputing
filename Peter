@@ -45,7 +45,8 @@ echo "GC percentage: "
 echo "scale=2; ($(grep -v '>' PTEN.fasta |tr -dc 'G' | wc -c) + $(grep -v '>' PTEN.fasta | tr -dc 'C' | wc -c)) / $(grep -v '>' PTEN.fasta |tr -dc 'AGTC' | wc -c) * 100" | bc
 
 #Create a nucleotide file title your name
-echo "A: $(grep -v '>' PTEN.fasta |tr -dc 'A' | wc -c)
+echo "The number of nucleotides in the sequence:
+ A: $(grep -v '>' PTEN.fasta |tr -dc 'A' | wc -c)
  G: $(grep -v '>' PTEN.fasta |tr -dc 'G' | wc -c)
  C: $(grep -v '>' PTEN.fasta |tr -dc 'C' | wc -c)
  T: $(grep -v '>' PTEN.fasta |tr -dc 'T' | wc -c)" >> peter.fasta
